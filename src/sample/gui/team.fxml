@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="807.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TeamMedlemController">
+   <children>
+      <VBox layoutX="-2.0" prefHeight="400.0" prefWidth="188.0" style="-fx-background-color: #477bc9#477bc9;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#loadback" prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Colour IT" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#createNew" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Add" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="192.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Edit" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#RemoveTeammedlem" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Remove" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#musklik" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Close" textFill="WHITE">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="tableTeammedlem" layoutX="186.0" prefHeight="400.0" prefWidth="438.0">
+         <columns>
+            <TableColumn fx:id="Fornavn" onEditCommit="#Editfornavn" prefWidth="75.0" text="Fornavn" />
+            <TableColumn fx:id="Efternavn" onEditCommit="#editefternavn" prefWidth="75.0" text="Efternavn" />
+            <TableColumn fx:id="Rolle" onEditCommit="#editrolle" prefWidth="96.0" text="Rolle" />
+            <TableColumn fx:id="Telefonnummer" onEditCommit="#edittelefon" prefWidth="96.0" text="Telefonnummer" />
+            <TableColumn fx:id="TeammedlemId" onEditCommit="#editteamedlem" prefWidth="96.0" text="TeammedlemId" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="625.0" layoutY="1.0" prefHeight="400.0" prefWidth="181.0">
+         <children>
+            <TextField fx:id="Efternavn1" layoutX="10.0" layoutY="100.0" promptText="Efternavn" />
+            <TextField fx:id="Fornavn1" layoutX="10.0" layoutY="34.0" promptText="Fornavn" />
+            <TextField fx:id="Rolle1" layoutX="7.0" layoutY="173.0" prefHeight="27.0" prefWidth="168.0" promptText="Rolle" />
+            <TextField fx:id="Tel1" layoutX="10.0" layoutY="235.0" prefHeight="27.0" prefWidth="161.0" promptText="Telefonnummer" />
+            <TextField fx:id="teamID1" layoutX="10.0" layoutY="289.0" promptText="Teammedlemid" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

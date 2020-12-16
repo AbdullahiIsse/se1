@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OpgaveController">
+   <children>
+      <VBox layoutX="-2.0" prefHeight="400.0" prefWidth="190.0" style="-fx-background-color: #477bc9#477bc9;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#loadback" prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Colour IT" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Nyside" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Add" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="slet" mnemonicParsing="false" onAction="#Slet" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Remove" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#musklik" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Close" textFill="WHITE">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="tableViewOpgaver" layoutX="186.0" prefHeight="400.0" prefWidth="415.0">
+         <columns>
+            <TableColumn fx:id="opgavetekst" onEditCommit="#OneditOpgavetekst" prefWidth="120.0" text="Opgave tekst" />
+            <TableColumn fx:id="Krav" onEditCommit="#OneditOpgavekrav" prefWidth="89.0" text="Krav" />
+            <TableColumn fx:id="estimat" onEditCommit="#OneditOpgaveestimat" prefWidth="100.0" text="Tids estimat" />
+            <TableColumn fx:id="prioritetsniveau" onEditCommit="#OneditOpgaveprio" prefWidth="105.0" text="Prioritetsniveau" />
+         </columns></TableView>
+      <TextField fx:id="opgavetekst1" layoutX="631.0" layoutY="45.0" prefHeight="27.0" prefWidth="149.0" promptText="Opgavetekst" />
+      <TextField fx:id="krav1" layoutX="634.0" layoutY="124.0" prefHeight="27.0" prefWidth="155.0" promptText="Krav" />
+      <TextField fx:id="tidsestimat1" layoutX="634.0" layoutY="200.0" prefHeight="27.0" prefWidth="155.0" promptText="Tids estimat" />
+      <TextField fx:id="Prioritetsniveau1" layoutX="634.0" layoutY="291.0" prefHeight="27.0" prefWidth="155.0" promptText="Prioritetsniveau" />
+   </children>
+</AnchorPane>
